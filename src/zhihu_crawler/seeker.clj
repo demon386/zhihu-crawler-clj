@@ -18,8 +18,7 @@
 
 (defn- ^{:testable true} clean-redundant-urls-for-zhihu [urls]
   (->> urls
-       (remove #(re-matches #"^/term.*" %))
-       (remove #(re-matches #".*question/\d+/answer/.*" %))))
+       (remove #(re-matches #"^/term.*" %))))
 
 (defn- ^{:testable true} complement-zhihu-urls [urls]
   (letfn [(complement-func [url]

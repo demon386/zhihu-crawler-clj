@@ -24,7 +24,7 @@
             (let [urls ["/question/30762106/answer/49413938"
                         "/terms/#sec-licence-1"]
                   results (clean-redundant-urls-for-zhihu urls)]
-              (count results) => 0))
+              (count results) => 1))
       (fact "complement urls"
             (let [urls ["/question/30762106/answer/49413938"
                         "http://www.zhihu.com/hello"]

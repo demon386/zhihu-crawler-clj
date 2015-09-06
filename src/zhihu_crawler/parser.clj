@@ -80,11 +80,7 @@
   (let [author-node
         (-> main-content-node
             (html/select [:div.zm-item-answer-author-info
-                          :h3.zm-item-answer-author-wrap]))
-        author-avatars
-        (-> author-node
-            (html/select [:img])
-            (->> (map (comp :src :attrs))))]
+                          :h3.zm-item-answer-author-wrap]))]
     (map parse-author-node author-node)))
 
 (defn parse-answers-content [main-content-node]
